@@ -1,0 +1,57 @@
+<ion-content>
+  <div class="background centralizado backgroundImage" >
+    <div class="imagem centralizado">
+      <img src="./../../assets/logo.png" alt="">
+    </div>
+    <button (click)="openGallery()">Abrir</button>
+    <form [formGroup]="form" (ngSubmit)="add()" class="centralizado" style="flex-direction: column; justify-content: flex-start;">
+      <h5 style="color: #fbb800;">Adicionar Nova Carta</h5>
+      
+      <ion-item >
+        <ion-label>Foto:</ion-label>
+        <ion-input type="text" class="input" formControlName="nome"></ion-input>
+        
+      </ion-item>
+      
+      <ion-item >
+        <ion-label>Nome:</ion-label>
+        <ion-input type="text" class="input" formControlName="nome"></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label>PA:</ion-label>
+        <ion-input type="number" class="input" formControlName="pa"></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label>PM:</ion-label>
+        <ion-input type="number" class="input" formControlName="pm"></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label>PV:</ion-label>
+        <ion-input type="number" class="input" formControlName="pv"></ion-input>
+      </ion-item>
+      
+      <ion-item style="margin-top:5%;">
+        <ion-label>Descrição:</ion-label>
+        
+        <ion-textarea formControlName="descricao" rows="5"></ion-textarea>
+        
+      </ion-item>
+      <ion-item style="margin-top:5%;">
+        <ion-label>Poderes:</ion-label>
+        
+        <ion-textarea formControlName="poderes" rows="5"></ion-textarea>
+        
+      </ion-item>
+      <button ion-button type="submit" [disabled]="!form.valid" class="btnLogin centralizado" >
+        <span style="background-image: url('./assets/login/parede.jpg');">
+          <p style="margin-top: -2%; font-size: 15px;">
+          Adicionar
+  
+          </p>
+  
+        </span>
+      </button>
+    </form>
+  </div>
+  
+</ion-content>

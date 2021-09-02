@@ -1,0 +1,56 @@
+.divPrincipal{
+    flex-direction: column;
+}
+
+.quadroLogin img{
+    width: 90%;
+    margin-top:-270px;
+    z-index: 2;
+    max-width: 360px;
+}
+.logo{
+    height: 40vh;
+    width: 100%;
+    min-height: 200px;
+}
+form{
+    margin-top:5%;
+    width: 100%;
+    max-width: 400px;
+    
+}
+.quadroLogin{
+    flex-direction: column;
+    width: 100%;
+    height: 60vh;
+    min-width: 320px;
+    min-height: 200px;
+   
+    color: white;
+    background-color: rgb(17, 0, 110);
+    justify-content: flex-start;
+    padding-top: 2%;
+}
+.borda{
+    width: 95%; 
+    height: 95%; 
+    border-radius: 7px;
+}
+.login{
+    
+    width: 98%; 
+    height: 97%; 
+    border-radius: 7px;
+}
+.botoes{
+    justify-content: space-between;
+    
+    height: 50px;
+    margin-top: 5%;
+    width: 65%;
+    
+}
+a{
+    color: #fbb800;
+    text-decoration: none;
+}

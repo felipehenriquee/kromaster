@@ -1,0 +1,10 @@
+{
+  "name": "icard2",
+  "integrations": {
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {}
+  },
+  "type": "angular"
+}

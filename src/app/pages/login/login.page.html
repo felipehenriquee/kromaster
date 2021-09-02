@@ -1,0 +1,91 @@
+<ion-content>
+  <div class="centralizado backgroundImage divPrincipal" >
+    <div class="centralizado logo backgroundImage" style="background-image: url('./assets/login/backgroundLogin.jpg');">
+
+    </div>
+    
+    <div class="quadroLogin centralizado backgroundImage" style="background-image: url('./assets/login/parede.jpg');" *ngIf="!registro" >
+      <img src="./assets/login/logoLogin.png" alt="">
+
+      <form [formGroup]="form" (ngSubmit)="login()" class="centralizado" style="flex-direction: column; justify-content: flex-start;">
+        <ion-item >
+          <ion-label>Email:</ion-label>
+          <ion-input type="email" class="input" formControlName="email"></ion-input>
+        </ion-item>
+        <ion-item style="margin-top:5%;">
+          <ion-label>Senha:</ion-label>
+          <ion-input type="password" class="input" formControlName="password"></ion-input>
+        </ion-item>
+        <button ion-button type="submit" [disabled]="!form.valid" class="btnLogin centralizado" >
+          <span style="background-image: url('./assets/login/parede.jpg');">
+            <p style="margin-top: -2%">
+            LOGIN
+
+            </p>
+
+          </span>
+        </button>
+        <div class="botoes centralizado">
+          
+          
+          <a (click)="registro = true">CADASTRE-SE</a>
+          <a href="" style="font-size: 10px;">Esqueceu Senha?</a>
+        </div>
+        
+      </form>
+      
+
+    </div>
+
+    <div class="quadroLogin centralizado backgroundImage" style="background-image: url('./assets/login/parede.jpg');" *ngIf="registro" >
+      <img src="./assets/login/logoLogin.png" alt="">
+
+      <form [formGroup]="form" (ngSubmit)="registrar()" class="centralizado" style="flex-direction: column; justify-content: flex-start;">
+        <ion-item >
+          <ion-label>Email:</ion-label>
+          <ion-input type="email" class="input" formControlName="email"></ion-input>
+        </ion-item>
+        <ion-item style="margin-top:5%;">
+          <ion-label>Senha:</ion-label>
+          <ion-input type="password" class="input" formControlName="password"></ion-input>
+        </ion-item>
+        <button ion-button type="submit" [disabled]="!form.valid" class="btnLogin centralizado" style="width: 230px;" >
+          <span style="background-image: url('./assets/login/parede.jpg');">
+            <p style="margin-top: -2%">
+            CADASTRAR
+
+            </p>
+
+          </span>
+        </button>
+        <div class="botoes centralizado">
+          
+          
+          <a (click)="registro = false; resetForm()">VOLTAR</a>
+          
+        </div>
+        
+      </form>
+      
+
+    </div>
+  </div>
+
+</ion-content>
+<!-- <div class="background centralizado backgroundImage" style="background-image: url('./assets/login/parede.jpg');">
+  <ion-content 
+  [scrollEvents]="true"
+
+  scrollY="true" >
+      <img src="./../../assets/logo.png" alt="">
+      <ion-content class="slide centralizado" >
+        <ion-content class="box" *ngFor="let item of cards"  >
+          <ion-content>
+            teste
+          </ion-content>
+        </ion-content>
+      </ion-content>
+    
+    
+  </ion-content>
+</div> -->

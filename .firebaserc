@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "back-pdm": {
+      "hosting": {
+        "app": [
+          "back-pdm"
+        ]
+      }
+    }
+  }
+}
